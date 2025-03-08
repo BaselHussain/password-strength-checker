@@ -41,7 +41,7 @@ if password:
     else:
         characters=string.ascii_letters + string.digits + string.punctuation
         passwordGive="".join(random.choice(characters) for _ in range(8))
-        feedback.append(f"Your password is weak. Please make it strong. Create password like {passwordGive}")
+        feedback.append(f"Your password is weak. Please make it strong. Create password like ")
 
     if feedback:
         st.markdown("## Improvement Suggestions")
