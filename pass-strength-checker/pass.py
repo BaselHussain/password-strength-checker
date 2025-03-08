@@ -39,15 +39,21 @@ if password:
         else:
             feedback.append("❌Password should contain atleast one special characters(!@#$%&).")
 
-    if score==4:
-        feedback.append("✅Your password is strong enough")
-    elif score==3:
-        feedback.append("Your password is medium strenght. It could be more strong")
-    else:
-        special_chars = "!@#$%&"
-        characters = string.ascii_letters + string.digits + special_chars
-        passwordGive = "".join(random.choice(characters) for _ in range(8))
-        feedback.append(f"Your password is weak. Please make it strong. Create password like {passwordGive}")
+        if score==4:
+            feedback.append("✅Your password is strong enough")
+        
+        elif score==3:
+            feedback.append("Your password is medium strenght. It could be more strong")
+        
+        else:
+            special_chars = "!@#$%&"
+            characters = string.ascii_letters + string.digits + special_chars
+            passwordGive = "".join(random.choice(characters) for _ in range(8))
+            feedback.append(f"Your password is weak. Please make it strong. Create password like {passwordGive}")
+        
+        
+        
+        
 
     if feedback:
         st.markdown("## Improvement Suggestions")
