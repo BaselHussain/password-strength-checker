@@ -25,7 +25,7 @@ if password:
         feedback.append("❌Password should contain both upper and lower case characters.")
 
     if re.search(r'[0-9]', password):
-        score=+1
+        score+=1
     else:
         feedback.append("❌Password should contain atleast one digit.")
 
